@@ -1,0 +1,188 @@
+/* Общие стили для секций */
+section {
+    padding: 4rem 2rem;
+   
+  }
+  
+ 
+  .hero-banner {
+ 
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.842));
+    color: white;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-banner h1 {
+    font-size: 3.5rem;
+    /* font-weight: 700; */
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: #ff69b4;
+  }
+  
+  .hero-banner p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    /* font-weight: 500; */
+  }
+  
+  /* Кнопки */
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: #ff69b4;
+    color: #000;
+    border: 2px solid #ff69b4;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #ff69b4;
+    border: 2px solid #ff69b4;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+  }
+  
+  /* Секция с вакансиями */
+  .vacancy-preview {
+    background: #f8f8f8;
+    text-align: center;
+  }
+  
+  .vacancy-preview h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  .vacancy-list {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .see-all {
+    color: #ff69b4;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .see-all:hover {
+    letter-spacing: 1px;
+  }
+  
+  /* Как это работает */
+  .how-it-works {
+    background: #000;
+    color: white;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff69b4;
+  }
+  
+  .how-it-works ol {
+    display: inline-block;
+    text-align: left;
+    font-size: 1.3rem;
+    max-width: 600px;
+  }
+  
+  .how-it-works li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    /* padding-left: 2.5rem; */
+  }
+  
+  /* .how-it-works li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem; 
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ff69b4;
+    border-radius: 50%;
+  } */
+  
+  /* Финальный CTA */
+  .final-cta {
+    text-align: center;
+    background: linear-gradient(135deg, #ff69b4 0%, #db3eb1 100%);
+    color: white;
+  }
+  
+  .final-cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .final-cta button {
+    background: #000;
+    color: #ff69b4;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .final-cta button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(245, 220, 232, 0.637);
+  }
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .hero-banner h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-banner p {
+      font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+      width: 100%;
+    }
+  }

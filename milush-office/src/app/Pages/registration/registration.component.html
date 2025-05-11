@@ -1,0 +1,71 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <img src="./logo-milush.png" alt="MILUSH-OFFICE" class="auth-logo">
+      <h2>РЕГИСТРАЦИЯ</h2>
+      <p>Создайте аккаунт, чтобы получить доступ ко всем возможностям</p>
+    <p  *ngIf="showSuccessMessage" >Вы успешно зарегестрировались</p>
+    </div>
+
+    <form class="auth-form">
+      <div class="form-group">
+        <label for="userName" >Ваше имя:</label>
+        <input 
+          type="text" 
+          id="userName" 
+          [(ngModel)]= "userName"
+          placeholder="ВАШЕ ИМЯ" 
+          autocomplete="username"
+         [ngModelOptions]="{standalone: true}"
+
+        >
+      </div>
+      <div class="form-group">
+        <label for="userEmail">Email</label>
+        <input 
+          type="email" 
+          id="userEmail" 
+          [(ngModel)]= "userEmail"
+          placeholder="ваш@email.com" 
+          autocomplete="username"
+        [ngModelOptions]="{standalone: true}"
+
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="userPassword">Пароль</label>
+        <input 
+          type="password" 
+          id="userPassword" 
+          [(ngModel)] = "userPassword"
+          placeholder="••••••••" 
+          autocomplete="new-password"
+              [ngModelOptions]="{standalone: true}"
+
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="userRole">Я хочу:</label>
+        <select id="userRole" [(ngModel)]="userRole" name="userRole"     [ngModelOptions]="{standalone: true}">
+          <option value="JobSeeker">Найти работу</option>
+          <option value="Employer">Нанять специалиста</option>
+        </select>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="auth-btn" (click)="registration()">{{ isSubmitting ? 'Регистрация...' : 'Зарегистрироваться' }}</button>
+        <div class="auth-divider">или</div>
+        <button type="button" class="auth-google">
+          <svg><!-- Иконка Google --></svg>
+          Продолжить с Google
+        </button>
+      </div>
+    </form>
+
+    <div class="auth-switch">
+      Уже есть аккаунт? <a routerLink="/auth/login">Войти</a>
+    </div>
+  </div>
+</div>
